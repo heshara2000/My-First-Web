@@ -24,12 +24,12 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  <div class="container-fluid" style="background-color: blue;">
     <a class="navbar-brand" href="#">Fruit~store</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
@@ -41,7 +41,7 @@
           <a class="nav-link" href="About-Us.php">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="regiter.php">sign In</a>
+          <a class="nav-link" href="register.php">sign In</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Login.php">Log In</a>
@@ -53,61 +53,61 @@
   </div>
 </nav>
 
-<section class="vh-100">
-  <div class="container py-5 h-100">
-  <div class="row d-flex align-items-center justify-content-center h-100">
-  
-  <div class="col-md-12 col-lg-7 col-xl-6">
-  <img src="../assets/welcome.png" alt="login backgrnd">
 
-</div>
-     
+  
+  <div class="row">
+      <div class="col-6">
+        
+        <img src="../assets/welcome.png" class="loginImage" alt="login backgrnd">
     
-   
-      <div class="col-md-0 col-lg-5 col-xl-10 ">
-        <form action="menu.php" method="POST">
-          <!-- Email input -->
-          <div class="form-outline mb-4">
-            <input type="email" id="form1Example13" class="form-control form-control-lg" />
-            <label class="form-label" for="form1Example13">Email address</label>
-          </div>
-
-          <!-- Password input -->
-          <div class="form-outline mb-4">
-            <input type="password" id="form1Example23" class="form-control form-control-lg" />
-            <label class="form-label" for="form1Example23">Password</label>
-          </div>
-
-          <div class="d-flex justify-content-around align-items-center mb-4">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-              <label class="form-check-label" for="form1Example3"> Remember me </label>
-            </div>
-            <a href="#!">Forgot password?</a>
-          </div>
-
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-lg btn-block" name="log_btn">Log in</button><br>
-
-
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-            <p>create a new account <a href="register.php">Register here</a></p>
-          </div>
-
-         
-
-        </form>
       </div>
-    </div>
+
+
+      <div class="col-6 ">
+        
+
+          <form action="menu.php" method="POST">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form1Example13" class="form-control form-control-lg" />
+              <label class="form-label" for="form1Example13">Email address</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form1Example23" class="form-control form-control-lg" />
+              <label class="form-label" for="form1Example23">Password</label>
+            </div>
+
+            <div class="d-flex justify-content-around align-items-center mb-4">
+              <!-- Checkbox -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                <label class="form-check-label" for="form1Example3"> Remember me </label>
+              </div>
+              <a href="#!">Forgot password?</a>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" name="log_btn">Log in</button><br>
+
+
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+              <p>create a new account <a href="register.php">Register here</a></p>
+            </div>
+
+          
+
+          </form>
+
+        
+        
+        
+      </div>
+
   </div>
-</section>
-  
-<div class="container">
- 
- 
-</div>
+
 
 </body>
 </html>

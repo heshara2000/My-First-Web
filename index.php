@@ -22,13 +22,13 @@ include 'php/conn.php' ;
 <body>
  
     
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+  <div class="container-fluid " style="background-color: blue;">
     <a class="navbar-brand" href="#">Fruit~store</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
