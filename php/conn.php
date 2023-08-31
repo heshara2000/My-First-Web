@@ -1,7 +1,7 @@
 <?php 
   $con = mysqli_connect('localhost','root','') ;
   if ($con) {
-    echo "" ; 
+    
   }else {
     echo "connection failed: " ;
   }
@@ -21,32 +21,13 @@
     $query = "INSERT INTO users (username,email,address,number,password) VALUES('$name','$email','$address', '$number','$password')" ;
     mysqli_query($con, $query) ;
     header("location:login.php") ;
+
      
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
+ 
 
 ?>
