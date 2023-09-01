@@ -60,7 +60,7 @@ include 'php/conn.php' ;
 </div>
 
 <div class="background m-0 " style="height: 80vh;">
-  <img src="./assets/image1.jpg" alt="avatar" style="width: 100%; object-fit: contain;">
+  <img src="./assets/blueberry.jpg" alt="avatar" style="width: 100%; height:fit-content ">
 </div>
 </body>
 </html>

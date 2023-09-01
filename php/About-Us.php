@@ -95,18 +95,22 @@
 <footer class="page-footer position-absolute bottom-0">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-4 col-sm-12">
+      <div class="col-6">
         <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
       </div>
 
+      <div class="col-2">
+
+      </div>
 
 
 
-      <div class="col-lg-4 col-md-4 col-sm-12">
-            <h6 class="text-uppercase font-weight-bold">Contact</h6>
-            <p>kadawatha,sri lanka
+
+      <div class="col-4">
+            <h6 class="text-uppercase font-weight-bold text-end ">Contact</h6>
+            <p class="text-end">kadawatha,sri lanka
             <br/>mywebsite.com
             <br/>011789921111
             <br/>0987765534</p>
