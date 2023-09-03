@@ -47,48 +47,94 @@
 
 
 <div class="container">
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-6">
-				<h2 class="text-center mb-4">User Registration Form</h2>
+		<div class="row justify-content-center" >   
+      <div class="col-lg-6">
+      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 				<form action="conn.php" method="POST">
-					<div class="mb-3">
-						<label for="username" class="form-label">Username:</label>
-						<input type="text" class="form-control" name="username" required>
+
+
+					<div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+              <label for="username" class="form-label">Username:</label>
+              <input type="text" class="form-control" name="username" required>
+        
+            </div>
 					</div>
-					<div class="mb-3">
-						<label for="email" class="form-label">Email:</label>
+
+
+					<div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+           
+						<label for="email" class="form-label">Email:    </label>
 						<input type="email" class="form-control" name="email" required>
+            </div>
 					</div>
-          <div class="mb-3">
+
+          <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
 						<label for="number" class="form-label">Mobile Number:</label>
 						<input type="number" class="form-control" name="number" required>
+            </div>
 					</div>
-          <div class="mb-3">
+
+
+          <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
 						<label for="address" class="form-label">Address:</label>
 						<input type="address" class="form-control" name="address" required>
+            </div>
 					</div>
-					<div class="mb-3">
-						<label for="password" class="form-label">Password:</label>
-						<p>at least include 8 characters</p>
-						<input type="password" class="form-control" name="password" required>
+
+					<div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+              <label for="password" class="form-label">Password:(At least 8 characters)</label>
+          
+              <input type="password" class="form-control" name="password" required>
+            </div>
+            
 					</div>
-					<div class="mb-3">
+
+					<div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
 						<label for="confirm_password" class="form-label">Confirm Password:</label>
 						<input type="password" class="form-control" name="confirm_password" required>
+            </div>
+
 					</div>
-          <br><br>
-					<div class="text-center">
-						<button type="submit" class="btn btn-primary" name="submit_btn">Register</button>
-					</div>
+
+          <div class="form-check d-flex justify-content-center mb-5">
+            <input type="checkbox" class="form-check-input" value=" " id="form2eample">
+            <label for="formeample" class="form-check-label">
+             I agree all statements in <a href="#!">Terms of service</a>
+
+            </label>
+          </div>
+
+          <div class="d-flex justify-content-center ">
+            <button type="button" class="btn btn-primary btn" name="submit_btn">Register</button>
+          </div>
+        
+				
 				</form>
 			</div>
-		</div>
+
+      <div class="col-lg-6 justify-conntent-center">
+      
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+          class="img-fluid" alt="Sample image">
+
+      </div>
+      
+      </div>
+      
 	</div>
-
-
-
-
-
 </body>
 </html>
 

@@ -76,6 +76,21 @@
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
+      <a href="#" class="btn btn-primary">read more</a>
+
+    </div>
+    <div class="box">
+      <img src="../assets/image10.jpg" alt="">
+      <h4>watermellon</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
+      <a href="#" class="btn btn-primary">read more</a>
+
+    </div>
+
+    <div class="box">
+      <img src="../assets/image10.jpg" alt="">
+      <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
       <a href="#" class="btn btn-primary">read more</a>
 
