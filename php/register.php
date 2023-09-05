@@ -46,18 +46,18 @@
   
 
 
-<div class="container">
+<div class="container-reg">
 		<div class="row justify-content-center" >   
-      <div class="col-lg-6">
-      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+      <div class="col-lg-4">
+        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 				<form action="conn.php" method="POST">
 
 
 					<div class="d-flex flex-row align-items-center mb-4">
-            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
             <div class="form-outline flex-fill mb-0">
               <label for="username" class="form-label">Username:</label>
-              <input type="text" class="form-control" name="username" required>
+              <input type="text" class="form-control" name="username" id="reg" required>
         
             </div>
 					</div>
@@ -68,7 +68,7 @@
             <div class="form-outline flex-fill mb-0">
            
 						<label for="email" class="form-label">Email:    </label>
-						<input type="email" class="form-control" name="email" required>
+						<input type="email" class="form-control" name="email" id="reg"  required>
             </div>
 					</div>
 
@@ -76,7 +76,7 @@
             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
             <div class="form-outline flex-fill mb-0">
 						<label for="number" class="form-label">Mobile Number:</label>
-						<input type="number" class="form-control" name="number" required>
+						<input type="number" class="form-control" name="number" id="reg" required>
             </div>
 					</div>
 
@@ -85,7 +85,7 @@
             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
             <div class="form-outline flex-fill mb-0">
 						<label for="address" class="form-label">Address:</label>
-						<input type="address" class="form-control" name="address" required>
+						<input type="address" class="form-control" name="address" id="reg" required>
             </div>
 					</div>
 
@@ -94,7 +94,7 @@
             <div class="form-outline flex-fill mb-0">
               <label for="password" class="form-label">Password:(At least 8 characters)</label>
           
-              <input type="password" class="form-control" name="password" required>
+              <input type="password" class="form-control" name="password" id="reg" required>
             </div>
             
 					</div>
@@ -103,7 +103,7 @@
             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
             <div class="form-outline flex-fill mb-0">
 						<label for="confirm_password" class="form-label">Confirm Password:</label>
-						<input type="password" class="form-control" name="confirm_password" required>
+						<input type="password" class="form-control" name="confirm_password" id="reg" required>
             </div>
 
 					</div>
@@ -117,7 +117,7 @@
           </div>
 
           <div class="d-flex justify-content-center ">
-            <button type="button" class="btn btn-primary btn" name="submit_btn">Register</button>
+            <button type="button" class="btn btn-primary btn" id="reg" name="submit_btn">Register</button>
           </div>
         
 				
@@ -128,13 +128,13 @@
       
 
         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-          class="img-fluid" alt="Sample image">
+          class="img-fluid" alt="Sample image" id="reg-img">
 
       </div>
       
       </div>
       
-	</div>
+</div>
 </body>
 </html>
 
