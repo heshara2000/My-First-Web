@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>login page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -63,20 +63,22 @@
       </div>
 
 
-      <div class="col-6 ">
+      <div class="col-4 ">
         
 
           <form action="menu.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form1Example13" class="form-control form-control-lg" />
               <label class="form-label" for="form1Example13">Email address</label>
+              <input type="email" id="form1Example13" class="form-control " />
+            
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="form1Example23" class="form-control form-control-lg" />
               <label class="form-label" for="form1Example23">Password</label>
+              <input type="password" id="form1Example23" class="form-control" />
+           
             </div>
 
             <div class="d-flex justify-content-around align-items-center mb-4">
@@ -85,16 +87,16 @@
                 <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
                 <label class="form-check-label" for="form1Example3"> Remember me </label>
               </div>
-              <a href="#!">Forgot password?</a>
+              <a href="register.php">Forgot password?</a>
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block" name="log_btn">Log in</button><br>
+            <button type="submit" class="btn btn-primary " name="log_btn">Log in</button><br>
 
 
             <div class="divider d-flex align-items-center my-4">
-              <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-              <p>create a new account <a href="register.php">Register here</a></p>
+              
+              <p> OR create a new account    <a href="register.php">Register here</a></p>
             </div>
 
           

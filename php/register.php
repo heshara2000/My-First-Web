@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title> Register form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+
+
+  
+
 </head>
 <body>
 
@@ -48,9 +53,9 @@
 
 <div class="container-reg">
 		<div class="row justify-content-center" >   
-      <div class="col-lg-4">
-        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-				<form action="conn.php" method="POST">
+      <div class="col-lg-3">
+        <p class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+				<form action="login.php" method="POST" >
 
 
 					<div class="d-flex flex-row align-items-center mb-4">
@@ -108,18 +113,20 @@
 
 					</div>
 
-          <div class="form-check d-flex justify-content-center mb-5">
+          <div class="form-check d-flex justify-content-center mb-4">
             <input type="checkbox" class="form-check-input" value=" " id="form2eample">
             <label for="formeample" class="form-check-label">
              I agree all statements in <a href="#!">Terms of service</a>
 
-            </label>
-          </div>
+            </label><br>
 
-          <div class="d-flex justify-content-center ">
-            <button type="button" class="btn btn-primary btn" id="reg" name="submit_btn">Register</button>
+            <input type="submit" value="Register here" name="submit_btn" id="reg-btn" class="btn btn-primary">
+
+  
           </div>
-        
+         
+
+      
 				
 				</form>
 			</div>

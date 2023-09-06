@@ -1,33 +1,31 @@
 <?php 
-  $con = mysqli_connect('localhost','root','') ;
-  if ($con) {
-    
-  }else {
-    echo "connection failed: " ;
+  $con = mysqli_connect('localhost', 'root', '');
+
+  // Check if the connection is successful
+  if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+    echo "error wil occur" ;
   }
-  
 
-  mysqli_select_db($con, 'fruits_store') ;
+  mysqli_select_db($con, 'fruits_store');
 
-//this isset function is used to submit the register initials of users to only login.php file.check the rgister btn named as 'submit_btn'
   if(isset($_POST['submit_btn'])){
-    $name = $_POST['username'] ;
+    $name = $_POST['username'];
     $email = $_POST['email'];
-    $address = $_POST['address'] ;
-    $number = $_POST['number'] ;
+    $address = $_POST['address'];
+    $number = $_POST['number'];
     $password = $_POST['password'];
-  
-  
-    $query = "INSERT INTO users (username,email,address,number,password) VALUES('$name','$email','$address', '$number','$password')" ;
-    mysqli_query($con, $query) ;
-    header("location:login.php") ;
 
-     
+    $query = "INSERT INTO users (username, email, address, number, password) VALUES('$name', '$email', '$address', '$number', '$password')";
+
+    // Perform the query and check for errors
+    if(mysqli_query($con, $query)) {
+      header("location: login.php");
+    } else {
+      echo "Error: " . mysqli_error($con);
+    }
   }
 
-
- 
- 
- 
-
+  // Close the database connection
+  mysqli_close($con);
 ?>

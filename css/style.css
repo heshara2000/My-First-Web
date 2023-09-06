@@ -26,6 +26,12 @@
     margin: 100px;
 }
 
+#reg-btn {
+    width: 150px;
+    height: 40px;
+    margin-left: 8px;
+}
+
 
 .containers .heading {
     text-align: center;
@@ -123,5 +129,25 @@
 
 #reg {
     border-radius: 25px;
+}
+
+
+#contact-id {
+    margin-bottom: 120px;
+    margin: 10px;
+}
+
+#contact-img {
+    height: 300px;
+    width: 300px;
+
+}
+
+#form1Example13 {
+    border-radius: 25px;
+}
+#form1Example23 {
+    border-radius: 25px;
+
 }
 

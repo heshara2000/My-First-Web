@@ -66,7 +66,7 @@
      
     <div class="col-lg-4 col-md-4 col-sm-12">
       <h3 class="feature-title">contact us</h3>
-      <img src="../assets/image8.jpg" class="img-fluid">
+      <img src="../assets/image8.jpg" class="img-fluid" id="contact-img">
 
     </div>
 
@@ -78,7 +78,7 @@
           <input type="text" class="form-control" placeholder="Name" name="Name"><br>
           <input type="email" class="form-control" placeholder="Email Address" name="email"><br>
           <textarea class="form-control" rows="4" name="message"></textarea><br>
-          <input type="submit" class="btn btn-primary " value="Send" name="submit-btn">
+          <input type="submit" class="btn btn-primary " value="Send" name="submit-btn" id="contact-id">
 
         </form>
       </div>
@@ -94,11 +94,11 @@
       
 <footer class="page-footer position-absolute bottom-0">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-6">
-        <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+        <h6 class="text-uppercase ">Additional Information</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+        
       </div>
 
       <div class="col-2">
