@@ -16,7 +16,7 @@ include 'php/conn.php' ;
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
+ 
 </head>
 
 <body>
@@ -31,7 +31,9 @@ include 'php/conn.php' ;
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
+        
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+      
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./php/Menu.php">Menu</a>

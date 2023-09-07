@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -51,9 +52,10 @@
   <div class="box-container">
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <h5>watermellon</h5>
+      <p><b>weight:1KG </b> </p>
+      <p><b>Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart  <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
@@ -61,7 +63,7 @@
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
 
@@ -69,7 +71,7 @@
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
 
@@ -77,14 +79,14 @@
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
 
@@ -92,7 +94,7 @@
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
 
@@ -100,7 +102,7 @@
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
 
@@ -108,7 +110,7 @@
       <img src="../assets/image10.jpg" alt="">
       <h4>watermellon</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">read more</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
 
     </div>
   </div>
