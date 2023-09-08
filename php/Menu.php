@@ -53,64 +53,71 @@
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
       <h5>watermellon</h5>
-      <p><b>weight:1KG </b> </p>
-      <p><b>Rs.700</b> </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
+      <p><b>Price: Rs.700</b> </p>
       <a href="#" class="btn btn-primary">Add to cart  <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
 
     <div class="box">
       <img src="../assets/image10.jpg" alt="">
-      <h4>watermellon</h4>
+      <h5>watermellon</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <p><b>Price: Rs.700</b> </p>
+      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
 
     </div>
   </div>

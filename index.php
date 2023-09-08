@@ -17,6 +17,111 @@ include 'php/conn.php' ;
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
  
+
+  <style>
+  
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container-gallery {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+   </style>
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -56,13 +161,98 @@ include 'php/conn.php' ;
 </nav>
 
 
-<div class="description m-0">
-	<h1>Welcome to the home Page!</h1>
-	<h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis. Suspendisse consectetur mi id libero fringilla, in pharetra sem ullamcorper.</p></h3>
+
+
+
+<div class="container-gallery">
+  <div class="mySlides">
+    
+    <img src="./assets/blueberry.jpg" style="width:100%" >
+  </div>
+
+  <div class="mySlides">
+   
+    <img src="./assets/image10.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+   
+    <img src="./assets/image12.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+  
+    <img src="./assets/image13.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+   
+    <img src="./assets/images4.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+   
+    <img src="./assets/image.6.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="./assets/blueberry.jpg" style="width:100%" onclick="currentSlide(1)" alt="NEW THINGS">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/image10.jpg" style="width:100%" onclick="currentSlide(2)" alt="GIVE UP FRESHER DAY">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/image12.jpeg" style="width:100%" onclick="currentSlide(3)" alt="BETTER CHOICE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/image13.jpeg" style="width:100%" onclick="currentSlide(4)" alt="EVERYTHINGIN ONE PLACE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./assets/images4.jpeg" style="width:100%" onclick="currentSlide(5)" alt="WELCOME ALL">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="./assets/image.6.jpg" style="width:100%" onclick="currentSlide(6)" alt="HAPPY DAY!!!!">
+    </div>
+  </div>
 </div>
 
-<div class="background m-0 " style="height: 80vh;">
-  <img src="./assets/blueberry.jpg" alt="avatar" style="width: 100%; height:fit-content ">
-</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body>
 </html>
