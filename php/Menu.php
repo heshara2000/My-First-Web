@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>mennu page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -45,81 +47,46 @@
     </div>
   </div>
 </nav>
+
   
 <div class="containers">
   <h2 class="heading">our services</h2>
 
   <div class="box-container">
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart  <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
+  <?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'fruits_store';
 
-    </div>
+$conn = new mysqli($host, $username, $password, $dbname);
 
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+    $query = "SELECT * FROM menu_item";
+    $result = mysqli_query($conn, $query);
+    
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo  "
+          <div class='box'>
+          <img src={$row['img_url']} alt=''  name='image' width='100%'>
+          <h5>{$row['Name']}</h5>
+          <p >{$row['description']} </p>
+          <p ><b>{$row['Price']}</b> </p>
+          <a href='#' class='btn btn-primary'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
+          </div>
+          " ;
+        }
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
 
-    </div>
+$conn->close();
 
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
+?>
 
-    </div>
-
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
-
-    </div>
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,</p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
-
-    </div>
-
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
-
-    </div>
-
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
-
-    </div>
-
-    <div class="box">
-      <img src="../assets/image10.jpg" alt="">
-      <h5>watermellon</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, </p>
-      <p><b>Price: Rs.700</b> </p>
-      <a href="#" class="btn btn-primary">Add to cart <i class="fa fa-shopping-cart" id="cart-btn"></i></a>
-
-    </div>
   </div>
   
 </div>

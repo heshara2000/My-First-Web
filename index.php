@@ -53,7 +53,7 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 30%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -109,16 +109,7 @@ img {
   opacity: 1;
 }
 
-   </style>
-
-
-
-
-
-
-
-
-
+</style>
 
 
 
@@ -167,7 +158,7 @@ img {
 <div class="container-gallery">
   <div class="mySlides">
     
-    <img src="./assets/blueberry.jpg" style="width:100%" >
+    <img src="./assets/blueberry.jpg" style="width:100%" height="100%">
   </div>
 
   <div class="mySlides">
