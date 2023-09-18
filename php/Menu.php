@@ -49,10 +49,10 @@
 </nav>
 
   
-<div class="containers">
-  <h2 class="heading">our services</h2>
+<div class='containers'>
+  <h2 class='heading'>our services</h2>
 
-  <div class="box-container">
+  <div class='box-container'>
   <?php
 $host = 'localhost';
 $username = 'root';
@@ -71,11 +71,11 @@ if ($conn->connect_error) {
         while ($row = mysqli_fetch_assoc($result)) {
           echo  "
           <div class='box'>
-          <img src={$row['img_url']} alt=''  name='image' width='100%'>
-          <h5>{$row['Name']}</h5>
-          <p >{$row['description']} </p>
-          <p ><b>{$row['Price']}</b> </p>
-          <a href='#' class='btn btn-primary'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
+            <img src={$row['img_url']} alt=''  name='image'>
+            <h5>{$row['Name']}</h5>
+            <p >{$row['description']} </p>
+            <p ><b>{$row['Price']}</b> </p>
+            <a href='#' class='btn btn-primary'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
           </div>
           " ;
         }
