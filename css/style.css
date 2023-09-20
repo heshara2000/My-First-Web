@@ -158,3 +158,89 @@
 
 }
 
+.profile-container {
+    border: 2px solid black;
+    height: 650px;
+    width: 600px;
+    border-radius: 25px;
+    margin-left: 250px;
+    margin-top: 50px;
+    padding-left: 10px;
+    
+}
+h1 {
+    color: coral;
+    padding-top: 25px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+.person {
+    
+     border: 1p solid blue;
+     font-size: 150px;
+     text-align: center;
+     padding-bottom: 10px;
+     
+}
+.line {
+    color: #c40d0d;
+    border: 2px solid;
+}
+.pname {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+}
+.pmail{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+
+}
+
+.pmobile{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+
+}
+.paddress{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+
+}
+
+
+
+.person-group{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 10px;
+    
+
+
+}
+.div1{
+    background-color: #589b37;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.div2{
+    background-color: #589b37;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.div3{
+    background-color: #589b37;
+    padding: 10px;
+    border-radius: 5px;
+}

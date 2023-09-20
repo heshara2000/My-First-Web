@@ -66,7 +66,7 @@
       <div class="col-4 ">
         
 
-          <form action="menu.php" method="POST">
+          <form action="profile.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form1Example13">Email address</label>
