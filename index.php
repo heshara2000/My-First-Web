@@ -37,6 +37,9 @@ img {
 .container-gallery {
   position: relative;
 }
+.container-gallery .row{
+  max-width: 100%;
+}
 
 /* Hide the images by default */
 .mySlides {

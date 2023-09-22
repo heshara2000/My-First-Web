@@ -25,19 +25,43 @@
           <i class="bi bi-person-circle"></i>
         </div>
         <hr class="line">
-        <div class="person-form">
-        Name:
-            <input type="text" id="pname" class="pname" name="pname" ><br><br>
-        Email:
-            <input type="text" id="pmail" class="pmail" name="pmail" ><br><br>
-        Mobile Number:
-            <input type="text" id="pmobile" class="pmobile" name="pmobile" ><br><br>
-        Address
-            <input type="text" id="pAddress" class="pAddress" name="pAddress" ><br><br>
-        </div>
+       
+
+        
+        <div class="d-flex flex-row align-items-center mb-2">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+					<label for="Name" class="form-label">Name</label>
+					<input type="text" class="form-control" name="pname" id="pname" required>
+            </div>
+		</div>
+        <div class="d-flex flex-row align-items-center mb-2">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+					<label for="address" class="form-label">Email</label>
+					<input type="text" class="form-control" name="pmail" id="pmail" required>
+            </div>
+		</div>
+
+        <div class="d-flex flex-row align-items-center mb-2">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+					<label for="address" class="form-label">Mobile number</label>
+					<input type="text" class="form-control" name="pmobile" id="pmobile" required>
+            </div>
+		</div>
+
+
+        <div class="d-flex flex-row align-items-center mb-2">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+					<label for="address" class="form-label">Address:</label>
+					<input type="text" class="form-control" name="pAddress" id="pAddress" required>
+            </div>
+		</div>
 
         <div class="person-group">
-            <button type="submit" class="div1" name="editbtn">edit</button>
+            <button type="submit" class="div1" name="editbtn" onclick="register.php">edit</button>
             <button type="submit" class="div2" name="deletebtn">delete</button>
             <button type="submit" class="div3" name="createbtn">crate new</button>
         </div>
