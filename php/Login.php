@@ -1,11 +1,7 @@
 <?php
 
-
-// connection php file
-
-
+// check log php file
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +49,11 @@
   </div>
 </nav>
 
-
+<script>
+  function lgBtn() {
+    alert ('you are now logged in!');
+  }
+</script>
   
   <div class="row">
       <div class="col-6">
@@ -65,19 +65,19 @@
 
       <div class="col-4 ">
         
-
+        
           <form action="profile.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form1Example13">Email address</label>
-              <input type="email" id="form1Example13" class="form-control " />
+              <input type="email" id="form1Example13" name="email" class="form-control " />
             
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form1Example23">Password</label>
-              <input type="password" id="form1Example23" class="form-control" />
+              <input type="password" id="form1Example23" name="password" class="form-control" />
            
             </div>
 
@@ -91,7 +91,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary " name="log_btn">Log in</button><br>
+            <button type="submit" class="btn btn-primary " onclick="lgBtn()" name="log_btn">Log in</button><br>
 
 
             <div class="divider d-flex align-items-center my-4">
@@ -99,17 +99,10 @@
               <p> OR create a new account    <a href="register.php">Register here</a></p>
             </div>
 
-          
-
-          </form>
-
-        
-        
+          </form> 
         
       </div>
-
   </div>
-
-
+<script src="../js/main.js"></script>
 </body>
 </html>
