@@ -51,6 +51,7 @@
   
 <div class='containers'>
   <h2 class='heading'>our services</h2>
+  <h1>hello</h1>
 
   <div class='box-container'>
   <?php
@@ -88,7 +89,11 @@ $conn->close();
 ?>
 
   </div>
-  
+
+
+</div>
+<div>
+ <button type="submit" class="add-cart"  onclick="cart()">go </button> 
 </div>
 
 </body>

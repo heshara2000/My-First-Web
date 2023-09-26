@@ -121,7 +121,7 @@ img {
 <body>
  
     
-<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="bs-navbar-padding-x: 0;">
   <div class="container-fluid " style="background-color: blue;">
     <a class="navbar-brand" href="#">Fruit~store</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
