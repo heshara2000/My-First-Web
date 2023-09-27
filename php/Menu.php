@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary  py-0 my-0">
   <div class="container-fluid" style="background-color: blue;">
     <a class="navbar-brand" href="#">Fruit~store</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,6 @@
   
 <div class='containers'>
   <h2 class='heading'>our services</h2>
-  <h1>hello</h1>
 
   <div class='box-container'>
   <?php
@@ -76,7 +75,7 @@ if ($conn->connect_error) {
             <h5>{$row['Name']}</h5>
             <p >{$row['description']} </p>
             <p ><b>{$row['Price']}</b> </p>
-            <a href='#' class='btn btn-primary'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
+            <a href='./Add_to_cart.php' class='btn btn-primary'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
           </div>
           " ;
         }
@@ -92,9 +91,7 @@ $conn->close();
 
 
 </div>
-<div>
- <button type="submit" class="add-cart"  onclick="cart()">go </button> 
-</div>
+
 
 </body>
 </html>
