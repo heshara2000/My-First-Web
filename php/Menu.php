@@ -1,4 +1,57 @@
+<?php
+session_start();
 
+if(isset($_POST["add_to_cart"]))
+{
+  if (isset($_SESSION["shopping_cart"]))
+  {
+    $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+    if (!in_array($_GET["menu_id"], $item_array_id))
+    {
+      $count = count($_SESSION["shopping_cart"]);
+      $item_array = array(
+        'item_id' => $_GET["menu_id"],
+        'item_name' => $_POST["Name"],
+        'item_price' => $_POST ['price'],
+        'item_quantity'=> $_POST['quantity'],
+      );
+
+      $_SESSION["shopping_cart"][$count] = $item_array;    
+
+    }
+
+  }else
+  {
+    echo '<script>alert("itemalready added")</script>' ;
+    echo '<script>window.location ="Menu.php"</script>' ;
+
+    $item_array = array(
+      'item_id' => $_GET["menu_id"],
+      'item_name' => $_POST["Name"],
+      'item_price' => $_POST ['price'],
+      'item_quantity'=> $_POST['quantity'],
+    );
+    $_SESSION["shopping_cart"] [0] = $item_array;
+
+  }
+}
+
+if(isset($_GET["action"]))
+{
+  if($_GET["action"] == "delete")
+  {
+    foreach($_SESSION["shopping_cart"] as $keys -> $values){
+      if ($values["item_id"] == $_GET["id"])
+      {
+        unset($_SESSION["shopping_cart"] [$keys]);
+        echo '<script>alert("item removed")</script>';
+        echo '<script>window.location="menu.php"</script>';
+
+      }
+    }
+  }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,40 +107,45 @@
 
   <div class='box-container'>
   <?php
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'fruits_store';
+  $host = 'localhost';
+  $username = 'root';
+  $password = '';
+  $dbname = 'fruits_store';
 
-$conn = new mysqli($host, $username, $password, $dbname);
+  $conn = new mysqli($host, $username, $password, $dbname);
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+      $query = "SELECT * FROM menu_item";
+      $result = mysqli_query($conn, $query);
+      
+      if ($result) {
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo  "
+            <div class='box'>
+              <img src={$row['img_url']} alt=''  name='image'>
+              <h5>{$row['Name']}</h5>
+              <p >{$row['description']} </p>
+              <p ><b> Rs.{$row['Price']}</b> </p>
+              <a href='' class='btn btn-primary' name='add_to_cart'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
+            </div>
+            " ;
+          }
+      } else {
+          echo "Error: " . mysqli_error($conn);
+      }
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-    $query = "SELECT * FROM menu_item";
-    $result = mysqli_query($conn, $query);
-    
-    if ($result) {
-        while ($row = mysqli_fetch_assoc($result)) {
-          echo  "
-          <div class='box'>
-            <img src={$row['img_url']} alt=''  name='image'>
-            <h5>{$row['Name']}</h5>
-            <p >{$row['description']} </p>
-            <p ><b>{$row['Price']}</b> </p>
-            <a href='./Add_to_cart.php' class='btn btn-primary'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
-          </div>
-          " ;
-        }
-    } else {
-        echo "Error: " . mysqli_error($conn);
-    }
+  $conn->close();
 
-$conn->close();
-
-?>
+  ?>
 
   </div>
+
+  <div class="footer-icon">
+    <a href="./Add_to_cart.php"><img src="../assets/bag.png" class="add-icon" alt="collect-icon"></a>
+    <span class="number">0</span>
+  </div>
+  
 
 
 </div>

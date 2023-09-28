@@ -11,7 +11,7 @@
 
   
   <script src="../js/main.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/addToCart.css">
+  <link rel="stylesheet" type="text/css" href="../css/add_To_Cart.css">
 </head>
 <body>
 
@@ -48,9 +48,61 @@
 <div class="container">
   <div class="container-box">
     <h1> My Items</h1>
-    
-  </div>
-</div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <tr>
+          <th width="40%">Item Name</th>
+          <th width="10%">quantity</th>
+          <th width="20%">Price</th>
+          <th width="10%">Total</th>
+          <th width="5%">Action</th>
+        </tr>
 
+        <?php
+        if (!empty($_SESSION["shopping_cart"]))  
+        {
+          $total =0;
+        }
+          foreach($_SESSION["shopping_cart"] as $keys -> $values)
+          {
+            if ($_SESSION["shopping_cart"][$keys]['menu_id'] == $_POST['menu_id']);
+            {
+              $total++;
+              $_SESSION["shopping_cart"][$keys]['item_quantity'] == $_SESSION['item_quantity'];
+
+            }
+         ?>  
+         
+         <tr>
+          <td><?php echo $values["item_name"]; ?></td>
+          <td><?php echo $values["item_quantity"]; ?></td>
+          <td>$<?php echo $values["item_price"]; ?></td>
+          <td><?php echo $values["item_name"]; ?></td>
+          <td><?php echo number_format($values["item_quantity"]* $values["item_price"], 2)?></td>
+          <td><a href="./menu.php?action=delete&id=<?php echo $values["item_name"];?>"><span class="text-danger">Remove</span></a></td>
+
+         </tr>
+          
+          
+         <?php
+            $total = $total+ ($values["item_quantity"] * $values["item_price"]);
+          }
+         ?>
+         
+
+         <tr>
+          <td colspan="3" text-align="right">total:</td>
+          <td text-align="right">$<?php echo number_format($total, 2);?></td>
+          <td></td> 
+        </tr>
+        
+        
+      </table>
+        
+    </div>
+        
+  </div>
+        
+</div>
 </body>
 </html>
