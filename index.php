@@ -124,7 +124,7 @@ img {
     
 <nav class="navbar navbar-expand-lg bg-body-tertiary  py-0 my-0" style="margin: 0 !important;" >
   <div class="container-fluid " style="background-color: blue;">
-    <a class="navbar-brand" href="#">Fruit~store</a>
+    <a  class="navbar-brand text-light" href="#">Fruit~store</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -132,21 +132,21 @@ img {
       <ul class="navbar-nav">
         <li class="nav-item">
         
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active text-light" aria-current="page" href="index.php">Home</a>
       
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./php/Menu.php">Menu</a>
+          <a class="nav-link text-light" href="./php/Menu.php">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./php/About-Us.php">Contact Us</a>
+          <a class="nav-link text-light" href="./php/About-Us.php">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./php/register.php">sign In</a>
+          <a class="nav-link text-light" href="./php/register.php">sign In</a>
         </li>
         <li class="nav-item">
           <i class="bi bi-person"></i>
-          <a class="nav-link" href="./php/Login.php">Log In</a>
+          <a class="nav-link text-light" href="./php/Login.php">Log In</a>
         </li>
       
         
