@@ -73,26 +73,26 @@ if(isset($_GET["action"]))
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary  py-0 my-0">
   <div class="container-fluid" style="background-color: blue;">
-    <a class="navbar-brand" href="#">Fruit~store</a>
+    <a class="navbar-brand text-light" href="#">Fruit~store</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link active text-light" aria-current="page" href="../index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./php/Menu.php">Menu</a>
+          <a class="nav-link text-light" href="./php/Menu.php">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="About-Us.php">Contact Us</a>
+          <a class="nav-link text-light" href="About-Us.php">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register.php">sign In</a>
+          <a class="nav-link text-light" href="register.php">sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Login.php">Log In</a>
+          <a class="nav-link text-light" href="Login.php">Log In</a>
         </li>
       
         
