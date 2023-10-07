@@ -1,24 +1,6 @@
 <?php
 session_start();
 
-if(isset($_POST["add_to_cart"])){
-  $product_name = $_POST ['product_name'];
-  $product_price = $_POST ['product_price'];
-  $product_image = $_POST ['product_image'];
-  $product_quantity= 1;
-
-  $select_cart= mysqli_query($conn , "SELECT * FROM 'cart' WHERE name='$product_name'" );
-
-  if(mysqli_num_rows($select_cart)> 0){
-    $message[] = 'product already added to the cart';
-  }else {
-    $insert_product = mysqli_query($conn, "INSERT INTO 'cart'(Name,Quantity,price) VALUES('$product_name','$product_price','$product_quantity')");
-
-    $message[] = 'product added to cart succesfull! ';
-
-  }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -91,18 +73,19 @@ if(isset($_POST["add_to_cart"])){
           while ($row = mysqli_fetch_assoc($result)) {
             echo  "
             <div class='box'>
+
               <img src={$row['img_url']} alt=''  name='image'>
               <h5>{$row['Name']}</h5>
               <p >{$row['description']} </p>
               <p ><b> Rs.{$row['Price']}</b> </p>
 
+              <form action='./cart.php' method='POST'>
 
-              <input type="hidden" name="product_name"  value="{$row['Name']} ?>">
-
-              <input type="hidden" name="product_price" value="{$row['price']} ?>">
-
-              <input type="hidden" name="product_image" value="{$row['img_url']} ?>">
-              <a href='' class='btn btn-primary' name='add_to_cart'>Add to cart  <i class='fa fa-shopping-cart' id='cart-btn'></i></a>
+              <input type='hidden' name='product_name' value='{$row['Name']}'>
+              <input type='hidden' name='product_price' value='{$row['Price']}'>
+              <input type='hidden' name='product_image' value='{$row['img_url']}'>
+              <button type='submit' class='btn btn-primary' name='add_to_cart'>Add to cart <i class='fa fa-shopping-cart' id='cart-btn'></i></button>             
+              </form>
             </div>
             " ;
           }
@@ -110,21 +93,19 @@ if(isset($_POST["add_to_cart"])){
           echo "Error: " . mysqli_error($conn);
       }
 
-  $conn->close();
-
   ?>
 
   </div>
 
-  <?php
-  $select_rows = mysqli_query($conn, "SELECT * FROM 'cart' ")or die('query failed');
-  $select_count = mysqli_num_rows($select_count)
+   <?php
+  $select_rows = mysqli_query ($conn, "SELECT * FROM 'cart' ") or  die('query failed');
+  $select_count = mysqli_num_rows($select_rows);
  
-  ?>
+  ?> 
 
   <div class="footer-icon">
     <a href="./Add_to_cart.php"><img src="../assets/bag.png" class="add-icon" alt="collect-icon">
-    <span class="number"><?php echo $select_count; ?></span></a>
+    <span class="number"><?php echo $select_count ?></span></a>
   </div>
   
 

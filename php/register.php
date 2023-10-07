@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-
-
-
   
 
 </head>
@@ -134,8 +131,7 @@
       <div class="col-lg-6 justify-conntent-center">
       
 
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-          class="img-fluid" alt="Sample image" id="reg-img">
+        <img src="../assets/register.jpg"  class="img-fluid" alt="Sample image" id="reg-img" >
 
       </div>
       

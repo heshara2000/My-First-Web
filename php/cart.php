@@ -1,18 +1,23 @@
 <?php
- include 'config.php';
-/////count the items and apply it to the bag view here...........
+ include 'config.php' ;
 
- $sql = "SELECT * FROM 'menu_items';";
-
- $results = mysqli_query($conn, $sql);
-
- $checkResults = mysqli_num_rows($results);
-
- if($checkResults > 0) {
-    while ($row = mysqli_fetch_assoc($results)) {
-      echo $row['menu_id'] . "<br>";
-      
-
+ 
+if(isset($_POST["add_to_cart"])){
+    $product_name = $_POST ['product_name'];
+    $product_price = $_POST ['product_price'];
+    $product_image = $_POST ['product_image'];
+    $product_quantity= 1;
+  
+    $select_cart= mysqli_query($conn , "SELECT * FROM 'cart' WHERE name='{$product_name}'" );
+  
+    if(mysqli_num_rows($select_cart)> 0){
+      echo  'product already added to the cart';
+    }else {
+      $insert_product = mysqli_query($conn, "INSERT INTO 'cart'(Name,Quantity,price,image) VALUES('{$product_name}','$product_quantity','{$product_price}','{$product_image}')");
+  
+      echo 'product added to cart succesfull! ';
+  
     }
- }
+  }
+
 ?>
