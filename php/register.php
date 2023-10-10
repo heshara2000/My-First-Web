@@ -1,6 +1,11 @@
 <?php
  //connect the conn.php file to check the validations
 //database connect in 'config.php' file
+session_start();
+if(isset($_SESSION["user"])){
+  header('location:login.php');
+}
+
  ?>
 
 <!DOCTYPE html>

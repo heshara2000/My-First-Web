@@ -1,5 +1,5 @@
 <?php
-
+  include 'config.php';  //to connect the database
 // check log php file
 ?>
 
@@ -40,7 +40,7 @@
           <a class="nav-link text-light" href="register.php">sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="Login.php">Log In</a>
+          <a class="nav-link text-light " href="Login.php">Log In</a>
         </li>
       
         
@@ -48,12 +48,6 @@
     </div>
   </div>
 </nav>
-
-<script>
-  function lgBtn() {
-    alert ('you are now logged in!');
-  }
-</script>
   
   <div class="row">
       <div class="col-6">
@@ -66,7 +60,7 @@
       <div class="col-4 ">
         
         
-          <form action="profile.php" method="POST">
+          <form action="checkLog.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form1Example13">Email address</label>
@@ -91,7 +85,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary " onclick="lgBtn()" name="log_btn">Log in</button><br>
+            <button type="submit" class="btn btn-primary" name="log_btn">Log in</button><br>
 
 
             <div class="divider d-flex align-items-center my-4">

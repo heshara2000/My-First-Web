@@ -1,45 +1,36 @@
 <?php
-
-//create connecton login.php
-$conn = mysqli_connect('localhost','root','','fruits_store');
-
-if(!$conn){
-   die ("connection failed : " . mysqli_connect_error());
-}else {
-    echo ("login successfull ");
+session_start();
+//check the user login validation
+if(isset($_SESSION["user"])){
+    header('location:Menu.php');
 }
+ //include 'config.php';
+
+ //check the login btn submission
 
 if(isset ($_POST['log_btn'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if(isset($_POST['remember'])){
-        setcookie("email",$email, time() + (86400*30), "/");
+    require_once 'config.php';
 
-        header("location:profile.php");
+    $sql = "SELECT * FROM users WHERE email='$email' ";
+
+    $result = mysqli_query($conn,$sql);
+    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    if ($user){
+       if(password_verify($password,$user["password"])) {
+        session_start();
+        $_SESSION["user"] = "yes";
+        header('location :Menu.php');
+       }
+       else{
+        echo "<div class='alert alert-danger'>password does not match</div>";
+       }
+
     }else {
-        echo "invalid . <br> . click here to <a href='register.php'>  ";
+        echo "<div class='alert alert-danger'>email does not match</div>";
+
     }
-
-
-}else {
-    header( "location: login.php");
 }
-
-
-
-
-$sql = "SELECT * FROM users WHERE 'email'=$email AND 'password'=$password ";
-
-$result = mysqli_query($conn,$sql);
-
-if (mysqli_num_rows($result)>0) {
-    header("location:Menu.php");
-    exit();
-}else {
-    echo ("invalid email or password try again");
-
-
-}
-
-mysqli_close($conn);
+?>
