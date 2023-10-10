@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2023 at 08:54 AM
+-- Generation Time: Oct 10, 2023 at 06:29 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `fruits_store`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `menu_id` int(255) NOT NULL,
+  `user_id` int(255) NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `Quantity` int(255) NOT NULL,
+  `Price` float NOT NULL,
+  `image` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -41,7 +56,14 @@ CREATE TABLE `menu_item` (
 
 INSERT INTO `menu_item` (`menu_id`, `Name`, `description`, `Price`, `img_url`) VALUES
 (1, 'banana', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '300', 'https://m.media-amazon.com/images/I/51ebZJ+DR4L._AC_UF1000,1000_QL80_.jpg'),
-(3, 'apple', 'vvvvvvvvvvvvvvvvvvvvvvvv', '300', 'https://cdn.britannica.com/22/187222-050-07B17FB6/apples-on-a-tree-branch.jpg');
+(3, 'apple', 'vvvvvvvvvvvvvvvvvvvvvvvv', '300', 'https://cdn.britannica.com/22/187222-050-07B17FB6/apples-on-a-tree-branch.jpg'),
+(4, 'grapes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '500', 'https://img.freepik.com/premium-vector/isolated-dark-grape-with-green-leaf_317810-1956.jpg?w=2000'),
+(5, 'orange', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '300', 'https://thumbs.dreamstime.com/b/orange-fruit-22884921.jpg'),
+(6, 'woodapple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '200', 'https://st3.depositphotos.com/12122328/14702/i/1600/depositphotos_147020287-stock-photo-wood-apple-isolated-on-white.jpg'),
+(7, 'Dragon Fruits', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '800', 'https://media.post.rvohealth.io/wp-content/uploads/2020/09/AN445-Dragonfruit-732x549-thumb-732x549.jpg'),
+(8, 'Stawberry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '1500', 'https://hips.hearstapps.com/countryliving/assets/15/22/1432664914-strawberry-facts1.jpg'),
+(9, 'Guava', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '200', 'https://www.foodrepublic.com/img/gallery/how-to-eat-guava-and-why-you-should/l-intro-1684540416.jpg'),
+(10, 'Mango', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio,', '300', 'https://sahajaaharam.com/files/Mango%20-%20Alphonzo.jpg');
 
 -- --------------------------------------------------------
 
@@ -99,6 +121,13 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `number`, `address`, `passw
 --
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`menu_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `menu_item`
 --
 ALTER TABLE `menu_item`
@@ -121,10 +150,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `menu_id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `menu_item`
 --
 ALTER TABLE `menu_item`
-  MODIFY `menu_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `menu_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -137,6 +172,16 @@ ALTER TABLE `messages`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

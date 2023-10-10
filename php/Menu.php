@@ -73,18 +73,18 @@ session_start();
           while ($row = mysqli_fetch_assoc($result)) {
             echo  "
             <div class='box'>
+            <form action='./cart.php' method='POST'>
 
               <img src={$row['img_url']} alt=''  name='image'>
               <h5>{$row['Name']}</h5>
               <p >{$row['description']} </p>
               <p ><b> Rs.{$row['Price']}</b> </p>
 
-              <form action='./cart.php' method='POST'>
 
-              <input type='hidden' name='product_name' value='{$row['Name']}'>
-              <input type='hidden' name='product_price' value='{$row['Price']}'>
-              <input type='hidden' name='product_image' value='{$row['img_url']}'>
-              <button type='submit' class='btn btn-primary' name='add_to_cart'>Add to cart <i class='fa fa-shopping-cart' id='cart-btn'></i></button>             
+                <input type='hidden' name='product_name' value='{$row['Name']}'>
+                <input type='hidden' name='product_price' value='{$row['Price']}'>
+                <input type='hidden' name='product_image' value='{$row['img_url']}'>
+                <button type='submit' class='btn btn-primary' name='add_to_cart'>Add to cart <i class='fa fa-shopping-cart' id='cart-btn'></i></button>             
               </form>
             </div>
             " ;
@@ -97,15 +97,10 @@ session_start();
 
   </div>
 
-   <?php
-  $select_rows = mysqli_query ($conn, "SELECT * FROM 'cart' ") or  die('query failed');
-  $select_count = mysqli_num_rows($select_rows);
- 
-  ?> 
 
   <div class="footer-icon">
     <a href="./Add_to_cart.php"><img src="../assets/bag.png" class="add-icon" alt="collect-icon">
-    <span class="number"><?php echo $select_count ?></span></a>
+    <span class="number">0</span></a>
   </div>
   
 

@@ -1,3 +1,8 @@
+<?php
+ //connect the conn.php file to check the validations
+//database connect in 'config.php' file
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +57,8 @@
 		<div class="row justify-content-center" >   
       <div class="col-lg-3">
         <p class="text-center h2 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-				<form action="login.php" method="POST" >
+
+				<form action="conn.php" method="POST" >
 
 
 					<div class="d-flex flex-row align-items-center mb-4">
