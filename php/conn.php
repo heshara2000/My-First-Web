@@ -1,6 +1,6 @@
 <?php
+session_start();
   include 'config.php';
-
   //$con = mysqli_connect('localhost', 'root', '','fruits_store');
 //set cookies
 
@@ -31,20 +31,28 @@
 
     $error =array();
 
-    if (empty($name) OR empty($email) OR empty($address) OR empty($number) OR empty($password)) {
+    if (empty($name) || empty($email) || empty($address) || empty($number) || empty($password)) {
        array_push($error,"all the fields are requuired");
+       $_SESSION['error']="please check your password";
+       header('location:register.php');
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       array_push($error, "email is not valid");
+      $_SESSION['error']="please check your password";
+      header('location:register.php');
     }
     if (strlen($password)<8){
       array_push($error,"password must be at least 8 characters");
+      $_SESSION['error']="please check your password";
+      header('location:register.php');
 
     }
     if($password!=$confirm_password){
       array_push($error,"please check your password");
-   
+      $_SESSION['error']="please check your password";
+      header('location:register.php');
+
      
     }
 

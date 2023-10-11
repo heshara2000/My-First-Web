@@ -1,4 +1,5 @@
 <?php
+session_start();
   include 'config.php';  //to connect the database
 // check log php file
 ?>
@@ -65,6 +66,12 @@
             <div class="form-outline mb-4">
               <label class="form-label" for="form1Example13">Email address</label>
               <input type="email" id="form1Example13" name="email" class="form-control " />
+              <?php
+              if(isset($_SESSION['check'])){
+                echo "<p class='text-danger'>{$_SESSION['check']}</p>";
+                $_SESSION['check']=null;
+              }
+              ?>
             
             </div>
 
@@ -72,6 +79,12 @@
             <div class="form-outline mb-4">
               <label class="form-label" for="form1Example23">Password</label>
               <input type="password" id="form1Example23" name="password" class="form-control" />
+              <?php
+              if(isset($_SESSION['check'])){
+                echo "<p class='text-danger'>{$_SESSION['check']}</p>";
+                $_SESSION['check']=null;
+              }
+              ?>
            
             </div>
 

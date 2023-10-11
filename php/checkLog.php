@@ -1,9 +1,7 @@
 <?php
 session_start();
 //check the user login validation
-if(isset($_SESSION["user"])){
-    header('location:Menu.php');
-}
+
  //include 'config.php';
 
  //check the login btn submission
@@ -19,17 +17,20 @@ if(isset ($_POST['log_btn'])) {
     $result = mysqli_query($conn,$sql);
     $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
     if ($user){
-       if(password_verify($password,$user["password"])) {
-        session_start();
+       if($password == $user["password"]) {
         $_SESSION["user"] = "yes";
-        header('location :Menu.php');
+        header('location:Menu.php');
        }
        else{
         echo "<div class='alert alert-danger'>password does not match</div>";
+        $_SESSION['check']="password does not match!! Try again";
+        header('location:login.php');
        }
 
     }else {
         echo "<div class='alert alert-danger'>email does not match</div>";
+        $_SESSION['check']="email is does not match! Try again";
+        header('location:login.php');
 
     }
 }

@@ -1,12 +1,10 @@
 <?php
  //connect the conn.php file to check the validations
 //database connect in 'config.php' file
-session_start();
-if(isset($_SESSION["user"])){
-  header('location:login.php');
-}
 
- ?>
+//formconnect to the conn.phpfile
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +19,6 @@ if(isset($_SESSION["user"])){
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-  
 
 </head>
 <body>
@@ -108,6 +105,13 @@ if(isset($_SESSION["user"])){
               <label for="password" class="form-label">Password:(At least 8 characters)</label>
           
               <input type="password" class="form-control" name="password" id="reg" required>
+              <?php
+              if(isset($_SESSION['error'])){
+                echo "<p class='text-danger'>{$_SESSION['error']}</p>";
+                $_SESSION['error'] =null;
+              }
+              ?>
+             
             </div>
             
 					</div>
