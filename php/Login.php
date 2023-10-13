@@ -57,7 +57,6 @@ session_start();
     
       </div>
 
-
       <div class="col-4 ">
         
         
@@ -81,8 +80,8 @@ session_start();
               <input type="password" id="form1Example23" name="password" class="form-control" />
               <?php
               if(isset($_SESSION['check'])){
-                echo "<p class='text-danger'>{$_SESSION['check']}</p>";
-                $_SESSION['check']=null;
+                echo "<p class='text-danger'>{$_SESSION['check']}</p>"; //to check the password and display the alert
+                $_SESSION['check']=null; //tend the alert
               }
               ?>
            

@@ -10,7 +10,7 @@ session_start();
    if ($results->num_rows > 0){
     while ($row=$results->fetch_assoc()) {
       $username=$row['username'];
-      setcookie("username" . $username, $username, time() + 3600*31, "/");
+      setcookie("username" . $username, $username, time() + 3600*24*31, "/");
 
 
     }

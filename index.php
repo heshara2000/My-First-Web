@@ -162,12 +162,12 @@ img {
 <div class="container-gallery">
   <div class="mySlides">
     
-    <img src="./assets/blueberry.jpg" style="width:100%" height="100%">
+    <img src="./assets/ff.jpg" style="width:100%" height="100%">
   </div>
 
   <div class="mySlides">
    
-    <img src="./assets/image10.jpg" style="width:100%">
+    <img src="./assets/ss.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
@@ -182,7 +182,7 @@ img {
 
   <div class="mySlides">
    
-    <img src="./assets/images4.jpeg" style="width:100%">
+    <img src="./assets/oo.jpg" style="width:100%">
   </div>
     
   <div class="mySlides">
@@ -199,10 +199,10 @@ img {
 
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="./assets/blueberry.jpg" style="width:100%" onclick="currentSlide(1)" alt="NEW THINGS">
+      <img class="demo cursor" src="./assets/ff.jpg" style="width:100%" onclick="currentSlide(1)" alt="NEW THINGS">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./assets/image10.jpg" style="width:100%" onclick="currentSlide(2)" alt="GIVE UP FRESHER DAY">
+      <img class="demo cursor" src="./assets/ss.jpg" style="width:100%" onclick="currentSlide(2)" alt="GIVE UP FRESHER DAY">
     </div>
     <div class="column">
       <img class="demo cursor" src="./assets/image12.jpeg" style="width:100%" onclick="currentSlide(3)" alt="BETTER CHOICE">
@@ -211,7 +211,7 @@ img {
       <img class="demo cursor" src="./assets/image13.jpeg" style="width:100%" onclick="currentSlide(4)" alt="EVERYTHINGIN ONE PLACE">
     </div>
     <div class="column">
-      <img class="demo cursor" src="./assets/images4.jpeg" style="width:100%" onclick="currentSlide(5)" alt="WELCOME ALL">
+      <img class="demo cursor" src="./assets/oo.jpg" style="width:100%" onclick="currentSlide(5)" alt="WELCOME ALL">
     </div>    
     <div class="column">
       <img class="demo cursor" src="./assets/image.6.jpg" style="width:100%" onclick="currentSlide(6)" alt="HAPPY DAY!!!!">

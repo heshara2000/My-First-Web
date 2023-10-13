@@ -20,6 +20,14 @@ session_start();
   <script src="../js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 
+
+  <style>
+    body{
+      font-family: Arial;
+      margin: 0;
+    }
+  </style>
+
 </head>
 <body>
 

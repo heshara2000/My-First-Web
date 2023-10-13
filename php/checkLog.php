@@ -5,6 +5,9 @@ session_start();
  //include 'config.php';
 
  //check the login btn submission
+///set cookies
+
+
 
 if(isset ($_POST['log_btn'])) {
     $email = $_POST['email'];
