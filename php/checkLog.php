@@ -9,6 +9,20 @@ session_start();
 
 
 
+// Verify the email and password.
+// ...
+
+// Generate a unique random value for the cookie.
+$cookie_value = uniqid();
+
+// Set the cookie name, value, expiration date, and path.
+setcookie("user_id", $cookie_value, time() + (86400 * 30), "/");
+
+// The cookie will now be sent to the user's browser.
+
+
+
+
 if(isset ($_POST['log_btn'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
