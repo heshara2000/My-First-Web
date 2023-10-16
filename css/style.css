@@ -253,7 +253,7 @@ h1 {
     position: fixed;
     width: 80px;
     height: 80px;
-    margin-left: 85%;
+    margin-left: 80%;
     top: 10%;
     border: 2px solid black;
     border-radius: 100px;
@@ -270,6 +270,6 @@ h1 {
 .number {
     color: blue;
     position: relative;
-    top: 50px;
+    top: 43px;
     font-size: larger;
 }

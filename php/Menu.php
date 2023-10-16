@@ -99,8 +99,8 @@ session_start();
 
 
   <div class="footer-icon">
-    <a href="./Add_to_cart.php"><img src="../assets/bag.png" class="add-icon" alt="collect-icon">
-    <span class="number">0</span></a>
+    <a href="./Add_to_cart.php"><img src="../assets/bag.png" class="add-icon" alt="collect-icon"></a>
+    <span class="number">0</span>
   </div>
   
 
